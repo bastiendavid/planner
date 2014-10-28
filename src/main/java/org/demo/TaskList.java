@@ -6,7 +6,7 @@ import java.util.List;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 
-public class ListOfTasks {
+public class TaskList {
 
     private class TaskWithNamePredicate implements Predicate<Task> {
         private String taskName;
