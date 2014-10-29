@@ -1,6 +1,7 @@
 package org.demo;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.google.common.base.Predicate;
@@ -29,5 +30,10 @@ public class TaskList {
 
     public boolean hasTask(String taskName) {
         return !Collections2.filter(tasks, new TaskWithNamePredicate(taskName)).isEmpty();
+    }
+
+    public void createNewTask(String taskName, Date dueDate) {
+        Task task = new Task(taskName, dueDate);
+        tasks.add(task);
     }
 }
