@@ -4,22 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 
 public class TaskList {
-
-    private class TaskWithNamePredicate implements Predicate<Task> {
-        private String taskName;
-
-        public TaskWithNamePredicate(String taskName) {
-            this.taskName = taskName;
-        }
-
-        public boolean apply(Task task) {
-            return task.name().equals(taskName);
-        }
-    }
 
     private List<Task> tasks = new ArrayList<Task>();
 
