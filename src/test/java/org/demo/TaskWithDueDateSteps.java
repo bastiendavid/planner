@@ -25,5 +25,6 @@ public class TaskWithDueDateSteps {
     @Then("^I should see my new task \"(.*?)\" in my list with the due date \"(.*?)\"$")
     public void i_should_see_my_new_task_in_my_list_with_the_due_date(String taskName, Date dueDate) throws Throwable {
         Assertions.assertThat(list.hasTask(taskName)).isTrue();
+        Assertions.assertThat(list.taskWithName(taskName).dueDate()).isEqualTo(dueDate);
     }
 }
