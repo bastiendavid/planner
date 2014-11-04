@@ -32,4 +32,9 @@ public class TaskList {
     public Task taskWithName(String name) {
         return Collections2.filter(tasks, new TaskWithNamePredicate(name)).iterator().next();
     }
+
+    public void createNewTask(String name, String details, Date dueDate) {
+        Task task = new Task(name, details, dueDate);
+        tasks.add(task);
+    }
 }

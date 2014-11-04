@@ -22,6 +22,12 @@ public class Task {
         this.details = details;
     }
 
+    public Task(String name, String details, Date dueDate) {
+        this.name = name;
+        this.details = details;
+        this.dueDate = dueDate;
+    }
+
     public String name() {
         return name;
     }
